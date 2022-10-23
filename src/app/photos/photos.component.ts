@@ -9,7 +9,7 @@ import { PhotosService } from './photos.service';
   templateUrl: './photos.component.html',
   styleUrls: ['./photos.component.scss']
 })
-export class PhotosComponent implements OnInit, AfterViewInit {
+export class PhotosComponent implements OnInit {
   @ViewChild('list')
   list!: ElementRef<HTMLDivElement>;
 
@@ -17,15 +17,11 @@ export class PhotosComponent implements OnInit, AfterViewInit {
 
   isLoading = false;
   constructor(private snackBar: MatSnackBar, private photoService: PhotosService) { }
-  ngAfterViewInit(): void {
 
-    //this.list.nativeElement.addEventListener('scroll',this.onScroll.bind(this),{passive: true})
-  }
 
   ngOnInit(): void {
-    //TODO
-
   }
+
 
   onScroll(event: Event) {
     //how much pixels the list has scrolled from the top

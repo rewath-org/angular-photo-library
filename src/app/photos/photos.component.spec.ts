@@ -100,7 +100,6 @@ describe('PhotosComponent', () => {
     fixture.detectChanges();
 
     fixture.whenStable().then(() => {
-      console.log('diff', list!.scrollTop - (list!.scrollHeight - list!.clientHeight));
       expect(component.loadMore).toHaveBeenCalled();
     })
     flush();
