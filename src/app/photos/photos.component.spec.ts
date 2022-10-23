@@ -95,13 +95,11 @@ describe('PhotosComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const list = compiled.querySelector('.list-container');
 
-    fixture.detectChanges();
     const debugEl = fixture.debugElement.query(By.css('.list-container'));
     debugEl.triggerEventHandler('scroll', { target: { scrollTop: 500, scrollHeight: 1000, clientHeight: 600 } });
     fixture.detectChanges();
 
     fixture.whenStable().then(() => {
-      fixture.detectChanges();
       console.log('diff', list!.scrollTop - (list!.scrollHeight - list!.clientHeight));
       expect(component.loadMore).toHaveBeenCalled();
     })

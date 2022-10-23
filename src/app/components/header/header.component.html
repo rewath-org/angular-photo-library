@@ -1,6 +1,7 @@
 <mat-card>
-<mat-button-toggle-group name="links" aria-label="Links">
-  <mat-button-toggle value="photos">Photos</mat-button-toggle>
-  <mat-button-toggle value="favs">Favorites</mat-button-toggle>
-</mat-button-toggle-group>
+
+  <div class="button-container">
+  <a id="photos-link" mat-stroked-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Photos</a>
+  <a id="favorites-link" mat-stroked-button routerLink="/favorites" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Favorites</a>
+  </div>
 </mat-card>

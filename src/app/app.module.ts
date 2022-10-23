@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -19,9 +20,11 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonToggleModule
-    
+    MatButtonToggleModule,
+    MatButtonModule
+
   ],
+  exports:[MatButtonModule],
   providers: [],
   bootstrap: [AppComponent]
 })

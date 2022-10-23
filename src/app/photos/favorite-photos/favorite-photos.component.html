@@ -1,1 +1,14 @@
-<p>favorite-photos works!</p>
+<div>
+  <div class="list-container" *ngIf="photos.length;else noPhotos">
+    <mat-grid-list cols="3" rowHeight="1:1" gutterSize="20" class="photos-scroll">
+      <mat-grid-tile *ngFor="let item of photos;let index=index" class="photo-tile">
+          <img [src]="item.url" width="100%" height="100%" [routerLink]="'/photos/'+item.id">
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
+  </div>
+</div>
+<ng-template #noPhotos>
+  <h3>No Photos</h3>
+</ng-template>

@@ -1,1 +1,7 @@
-<p>photo-details works!</p>
+<div class="container">
+  <img [src]="photo?.url">
+
+  <div class="button-container" *ngIf="photo">
+    <button mat-stroked-button (click)="removeFromFavorites()">Remove from favorites</button>
+  </div>
+</div>

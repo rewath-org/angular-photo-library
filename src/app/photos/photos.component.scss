@@ -1,3 +1,28 @@
 mat-grid-tile {
     background: lightblue;
   }
+
+  .list-container {
+    position: relative;
+    height: 800px;
+    overflow-y: scroll;
+    margin: 10px 20px 10px;
+    min-height: 800px;
+  }
+
+  .loading-container {
+    position: relative;
+    bottom: 0px;
+
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo-tile {
+   &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+   }
+  }
+

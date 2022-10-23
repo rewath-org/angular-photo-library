@@ -4,7 +4,11 @@ import { PhotosComponent } from './photos.component';
 import { FavoritePhotosComponent } from './favorite-photos/favorite-photos.component';
 import { PhotoDetailsComponent } from './photo-details/photo-details.component';
 import { PhotosRoutingModule } from './photos-routing.modue';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -17,7 +21,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
   imports: [
     CommonModule,
     PhotosRoutingModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class PhotosModule { }
