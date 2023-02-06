@@ -23,6 +23,6 @@ jobs:
       run: |
         raw=$(git branch -r --contains ${{ github.ref }})
         branch=${raw##*/}
-        echo "branch_name=yellow" >> $GITHUB_ENV
+        echo "branch_name=$branch" >> $GITHUB_ENV
         echo "Branch is ${{ env.branch_name }}."
         echo "ref is ${{ github.event.base_ref }}"
