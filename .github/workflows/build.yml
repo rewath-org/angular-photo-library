@@ -29,5 +29,5 @@ jobs:
         echo "Branch is $branch"
         echo "ref is ${{ github.event.base_ref }}"
     - name: Protect
-      if: ${{ needs.check.outputs.branch == 'master' }}
+      if: ${{ needs.check.outputs.branch == 'main' }}
       run: echo "check passed"
