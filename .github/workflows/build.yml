@@ -26,8 +26,12 @@ jobs:
         echo "branch=$branch" >> $GITHUB_OUTPUT
         echo "Branch is $branch"
         echo "ref is ${{ github.event.base_ref }}"
+        ref_raw=${{ github.event.base_ref }}
+        ref=${ref_raw##*/}
+        echo "ref=$ref" >> $GITHUB_OUTPUT
     - name: Protect
       if: ${{ steps.check_step.outputs.branch == 'main' }}
       run: |
        echo "check passed..."
        echo "branch is ${{ steps.check_step.outputs.branch }}"
+       echo "ref is ${{ steps.check_step.outputs.ref }}"
