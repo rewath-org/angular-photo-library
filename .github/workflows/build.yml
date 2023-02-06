@@ -22,5 +22,5 @@ jobs:
       run: |
         raw=$(git branch -r --contains ${{ github.ref }})
         branch=${raw##*/}
-        echo "::set-output name=branch::$branch"
-        echo "Branch is $branch."
+        echo "branch_name=yellow" >> $GITHUB_ENV
+        echo "Branch is ${{ env.branch_name }}."
