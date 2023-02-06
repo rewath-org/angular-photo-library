@@ -23,11 +23,11 @@ jobs:
       run: |
         raw=$(git branch -r --contains ${{ github.ref }})
         branch=${raw##*/}
-        #echo "branch_name=$branch" >> $GITHUB_ENV
-        echo "::set-output name=branch_name::$branch"
-        #echo "Branch is ${{ env.branch_name }}."
+        echo "branch=$branch" >> $GITHUB_OUTPUT
         echo "Branch is $branch"
         echo "ref is ${{ github.event.base_ref }}"
     - name: Protect
-      if: ${{ needs.check.outputs.branch == 'main' }}
-      run: echo "check passed"
+      if: ${{ steps.check_step.outputs.branch == 'main' }}
+      run: |
+       echo "check passed"
+       echo "branch is ${{ steps.check_step.outputs.branch }}"
