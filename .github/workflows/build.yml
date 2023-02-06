@@ -29,5 +29,5 @@ jobs:
     - name: Protect
       if: ${{ steps.check_step.outputs.branch == 'main' }}
       run: |
-       echo "check passed"
+       echo "check passed..."
        echo "branch is ${{ steps.check_step.outputs.branch }}"
